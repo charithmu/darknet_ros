@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+    <!-- darknet_ros nodelet -->
+    <include file="$(find darknet_ros)/launch/darknet_ros_nodelet.launch">
+    </include>
+
+    <!-- darknet_ros_3d node -->
+    <node pkg="darknet_ros_3d" type="darknet3d_node" name="darknet_3d" output="screen">
+        <rosparam command="load" file="$(find darknet_ros_3d)/config/darknet_3d.yaml" />
+    </node>
+    
+</launch>
