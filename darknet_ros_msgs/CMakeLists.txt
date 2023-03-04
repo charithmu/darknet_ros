@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.5.1)
 
 project(darknet_ros_msgs)
 
-set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+# Set c++11 cmake flags
+set(CMAKE_CXX_STANDARD 11)
 
 find_package(catkin REQUIRED
   COMPONENTS
