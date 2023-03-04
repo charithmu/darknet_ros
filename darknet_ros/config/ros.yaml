@@ -1,7 +1,7 @@
 subscribers:
 
   camera_reading:
-    topic: /camera/rgb/image_raw
+    topic: /summit_xl/front_rgbd_camera/rgb/image_raw
     queue_size: 1
 
 actions:
@@ -24,10 +24,10 @@ publishers:
   detection_image:
     topic: /darknet_ros/detection_image
     queue_size: 1
-    latch: true
+    latch: false
 
 image_view:
 
-  enable_opencv: true
-  wait_key_delay: 1
+  enable_opencv: false # Enable or disable the open cv view of the detection image including the bounding boxes.
+  wait_key_delay: 1 # Wait key delay in ms of the open cv window.
   enable_console_output: true

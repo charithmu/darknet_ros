@@ -1,12 +1,12 @@
 yolo_model:
 
-  config_file:
+  config_file: # Name of the cfg file of the network that is used for detection. The code searches for this name inside darknet_ros/yolo_network_config/cfg/.
     name: yolov3.cfg
-  weight_file:
+  weight_file: # Name of the weights file of the network that is used for detection. The code searches for this name inside darknet_ros/yolo_network_config/weights/.
     name: yolov3.weights
-  threshold:
+  threshold: # Threshold of the detection algorithm. It is defined between 0 and 1.
     value: 0.3
-  detection_classes:
+  detection_classes: # Detection names of the network used by the cfg and weights file inside darknet_ros/yolo_network_config/.
     names:
       - person
       - bicycle
